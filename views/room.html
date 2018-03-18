@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible">
+
+	<title>Audimance - Room {{.LabelText}}</title>
+
+</head>
+<body>
+
+	Room {{.LabelText}} <span id="loadStatus">loading</span>
+
+	<!-- audio files to be played (so that they may be pre-loaded -->
+	{{range $key, $val := .AllTracks()}}
+	<audio id="{{$val.ID()}}" preload="auto" src="{{$val.URI()}}" preload="auto">
+	{{end}}
+
+	<script src="/app/room.js"></script>
+</body>
+</html>

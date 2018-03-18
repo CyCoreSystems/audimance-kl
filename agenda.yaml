@@ -1,0 +1,63 @@
+cues:
+  - name: "5min"
+    qlabId: "010101-11"
+    data: "5-minute warning"
+  - name: "intro"
+    qlabId: "010102"
+    data: "blah"
+  - name: "erste"
+    qlabId: "020202"
+    data: "blah, blah"
+  - name: "zweite"
+    qlabId: "030105-01011"
+    data: "blah, blah, blah"
+
+rooms:
+  - name: "stage"
+    labelText: "Main Stage"
+    sources:
+      - name: "Alex monologue"
+        room: "stage"
+        location:
+          x: 100
+          y: 200
+          z: 10
+        tracks:
+          - cue: "intro"
+            audioFile: "/alex-first.wav"
+          - cue: "erste"
+            audioFile: "/alex-second.wav"
+      - name: "George debates"
+        room: "stage"
+        location:
+          x: 300
+          y: 0
+          z: 10
+        tracks:
+          - cue: "intro"
+            audioFile: "/george-denies-gw.wav"
+          - cue: "erste"
+            audioFile: "/george-stands-on-guns.wav"
+          - cue: "zweite"
+            audioFile: "/george-lies.wav"
+  - name: "reception"
+    labelText: "Reception Hall"
+  - name: "history"
+    labelText: "History Talk"
+  - name: "history"
+    room: "history"
+    roomTrack:
+      tracks: 
+        - "/history.wav"
+  - name: "welcome"
+    room: "reception"
+    roomTrack:
+      audioFile: "/welcome.wav"
+
+announcements:
+  - name: "5min"
+    cue: "5min"
+    excludeRooms:
+      - "stage"
+    source:  "/5min-warning.wav"
+
