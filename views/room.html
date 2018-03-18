@@ -4,16 +4,18 @@
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible">
 
-	<title>Audimance - Room {{.LabelText}}</title>
+	<title>Audimance - Room {{.Room.LabelText}}</title>
 
 </head>
 <body>
 
-	Room {{.LabelText}} <span id="loadStatus">loading</span>
+	Room {{.Room.LabelText}} <span id="loadStatus">loading</span>
 
-	<!-- audio files to be played (so that they may be pre-loaded -->
-	{{range $key, $val := .AllTracks()}}
-	<audio id="{{$val.ID()}}" preload="auto" src="{{$val.URI()}}" preload="auto">
+	<!-- audio files to be played -->
+	{{range .Room.AllTracks}}
+	<audio id="{{.ID}}" preload="auto">
+		<source src="{{.URI}}" preload="auto" type="audio/ogg; codecs=opus"/>
+	</audio>
 	{{end}}
 
 	<script src="/app/room.js"></script>

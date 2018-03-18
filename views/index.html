@@ -7,19 +7,19 @@
 	<title>Audimance - Room List</title>
 
 	<!-- Prefetch all audio files -->
-	{{range $key, $val := .AllTracks()}}
-	<link rel="prefetch" href="$val.URI()">
+	{{range .AllTracks}}
+	<link rel="prefetch" as="media" href="{{.URI}}">
 	{{end}}
 
 
 </head>
 <body>
 
-	Rooms:
+	Rooms List:
 
 	<ul>
-		{{range $key, $val := .Rooms}}
-		<li><a href="/room/{{$val.ID}}">{{$val.LabelText}}</a></li>
+		{{range .Rooms}}
+		<li><a href="/room/{{.ID}}">{{.LabelText}}</a></li>
 		{{end}}
 	</ul>
 
