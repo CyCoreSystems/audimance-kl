@@ -12,14 +12,16 @@
 	Room {{.Room.LabelText}} <span id="loadStatus">loading</span>
 	<input type="hidden" id="roomName" value="{{.Room.Name}}">
 
-	<!-- audio files to be played -->
+	<!-- audio files to be played >
 	{{range .Room.AllTracks}}
 	<audio id="{{.ID}}" preload="auto">
 		<source real_src="{{.URI}}" type="audio/ogg; codecs=opus"/>
 	</audio>
 	{{end}}
+   < -->
 
-	<script src="/app/resonance-audio.min.js"></script>
+	<!-- script src="/app/resonance-audio.min.js"></script -->
+	<script src="/app/howler.js"></script>
 	<script src="/app/room.js"></script>
 </body>
 </html>

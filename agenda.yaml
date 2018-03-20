@@ -1,87 +1,123 @@
 cues:
   - name: "5min"
-    q_lab_id: "00-05-00"
-    data: "5 minute warning"
+    data: "5-min"
   - name: "2min"
-    q_lab_id: "00-02-00"
-    data: "2 minute warning"
+    data: "2-min"
   - name: "30sec"
-    q_lab_id: "00-00-30"
-    data: "30 second warning"
+    data: "30-sec"
   - name: "Preshow"
-    q_lab_id: "00-00-00"
-    data: "preshow"
-  - name: "Start"
-    q_lab_id: "01-00-00"
-    data: "Andromeda solo"
-  - name: "Venus"
-    q_lab_id: "01-02-00"
-    data: "Venus entrance"
+    data: "Preshow"
+  - name: "Top of Act 1"
+    data: "Top of Act 1"
+  - name: "Venus Solo"
+    data: "Venus Solo"
   - name: "Pastorale"
-    q_lab_id: "01-07-00"
-    data: "Pastorale top"
+    data: "Pastorale"
   - name: "Intermission warning"
-    q_lab_id: "01-08-60"
-    data: "Act II in begins in one minute"
-  - name: "ActII"
-    q_lab_id: "02-00-00"
-    data: "Undressing"
-  - name: "Ethereal"
-    q_lab_id: "02-03-00"
+    data: "INT-60 sec warning"
+  - name: "Top of Act 2"
+    data: "Top of Act 2"
+  - name: "Underworld"
+    data: "Underworld"
+  - name: "Ethereal Tree"
     data: "Ethereal Tree"
-  - name: "Finale"
-    q_lab_id: "02-09-00"
+  - name: "Dead Reckoning"
     data: "Dead Reckoning"
 
 rooms:
   - name: "stage"
     label_text: "Main Stage"
     sources:
+      - name: "Bumps and Bangs"
+        location:
+          x: 3
+          y: 0
+          z: 1
+        tracks:
+          - cue: "Top of Act 1"
+            audio_file: "/performance/1bump.opus"
+          - cue: "Venus Solo"
+            audio_file: "/performance/2bump.opus"
+          - cue: "Pastorale"
+            audio_file: "/performance/3bump.opus"
+          - cue: "Top of Act 2"
+            audio_file: "/performance/4bump.opus"
+          - cue: "Ethereal Tree"
+            audio_file: "/performance/5bump.opus"
+          - cue: "Dead Reckoning"
+            audio_file: "/performance/6bump.opus"
+      - name: "David"
+        location:
+          x: 0
+          y: 3
+          z: 1
+        tracks:
+          - cue: "Top of Act 1"
+            audio_file: "/performance/1david.opus"
+          - cue: "Venus Solo"
+            audio_file: "/performance/2david.opus"
+          - cue: "Pastorale"
+            audio_file: "/performance/3david.opus"
+          - cue: "Top of Act 2"
+            audio_file: "/performance/4david.opus"
+          - cue: "Ethereal Tree"
+            audio_file: "/performance/5david.opus"
+          - cue: "Dead Reckoning"
+            audio_file: "/performance/6david.opus"
       - name: "Dylan"
         location:
           x: 1
           y: 2
           z: 1
         tracks:
-          - cue: "intro"
-            audio_file: "/performance/dylan.opus"
-      - name: "David"
-        location:
-          x: 3
-          y: 0
-          z: 1
-        tracks:
-          - cue: "intro"
-            audio_file: "/performance/david.opus"
+          - cue: "Top of Act 1"
+            audio_file: "/performance/1dylan.opus"
+          - cue: "Venus Solo"
+            audio_file: "/performance/2dylan.opus"
+          - cue: "Pastorale"
+            audio_file: "/performance/3dylan.opus"
+          - cue: "Top of Act 2"
+            audio_file: "/performance/4dylan.opus"
+          - cue: "Ethereal Tree"
+            audio_file: "/performance/5dylan.opus"
+          - cue: "Dead Reckoning"
+            audio_file: "/performance/6dylan.opus"
       - name: "George"
         location:
           x: 5
           y: 5
           z: 0
         tracks:
-          - cue: "intro"
-            audio_file: "/performance/george_1.opus"
+          - cue: "Top of Act 1"
+            audio_file: "/performance/1george.opus"
+          - cue: "Venus Solo"
+            audio_file: "/performance/2george.opus"
+          - cue: "Pastorale"
+            audio_file: "/performance/3george.opus"
+          - cue: "Top of Act 2"
+            audio_file: "/performance/4george.opus"
+          - cue: "Ethereal Tree"
+            audio_file: "/performance/5george.opus"
+          - cue: "Dead Reckoning"
+            audio_file: "/performance/6george.opus"
       - name: "Headers"
         location:
-          x: 0
-          y: 0
-          z: 0
+          x: 2
+          y: 2
+          z: 2
         tracks:
-          - cue: "intro"
-            audio_file: "/performance/headers.opus"
-  - name: "reception"
-    label_text: "Reception Hall"
-  - name: "history"
-    label_text: "History Talk"
-  - name: "history"
-    label_text: "history"
-    room_track:
-      tracks: 
-        - "/history.wav"
-  - name: "welcome"
-    label_text: "reception"
-    room_track:
-      audio_file: "/welcome.wav"
+          - cue: "Top of Act 1"
+            audio_file: "/performance/1header.opus"
+          - cue: "Venus Solo"
+            audio_file: "/performance/2header.opus"
+          - cue: "Pastorale"
+            audio_file: "/performance/3header.opus"
+          - cue: "Top of Act 2"
+            audio_file: "/performance/4header.opus"
+          - cue: "Ethereal Tree"
+            audio_file: "/performance/5header.opus"
+          - cue: "Dead Reckoning"
+            audio_file: "/performance/6header.opus"
 
 announcements:
   - name: "5min"
