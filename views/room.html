@@ -15,7 +15,7 @@
 	<!-- audio files to be played -->
 	{{range .Room.AllTracks}}
 	<audio id="{{.ID}}" preload="auto">
-		<source src="{{.URI}}" preload="auto" type="audio/ogg; codecs=opus"/>
+		<source real_src="{{.URI}}" type="audio/ogg; codecs=opus"/>
 	</audio>
 	{{end}}
 
