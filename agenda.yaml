@@ -39,20 +39,36 @@ rooms:
     sources:
       - name: "Dylan"
         location:
-          x: 100
-          y: 200
-          z: 10
+          x: 1
+          y: 2
+          z: 1
         tracks:
           - cue: "intro"
             audio_file: "/performance/dylan.opus"
       - name: "David"
         location:
-          x: 300
+          x: 3
           y: 0
-          z: 10
+          z: 1
         tracks:
           - cue: "intro"
             audio_file: "/performance/david.opus"
+      - name: "George"
+        location:
+          x: 5
+          y: 5
+          z: 0
+        tracks:
+          - cue: "intro"
+            audio_file: "/performance/george_1.opus"
+      - name: "Headers"
+        location:
+          x: 0
+          y: 0
+          z: 0
+        tracks:
+          - cue: "intro"
+            audio_file: "/performance/headers.opus"
   - name: "reception"
     label_text: "Reception Hall"
   - name: "history"

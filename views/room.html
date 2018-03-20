@@ -10,6 +10,7 @@
 <body>
 
 	Room {{.Room.LabelText}} <span id="loadStatus">loading</span>
+	<input type="hidden" id="roomName" value="{{.Room.Name}}">
 
 	<!-- audio files to be played -->
 	{{range .Room.AllTracks}}
@@ -18,6 +19,7 @@
 	</audio>
 	{{end}}
 
+	<script src="/app/resonance-audio.min.js"></script>
 	<script src="/app/room.js"></script>
 </body>
 </html>
