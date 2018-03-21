@@ -6,26 +6,18 @@
 
 	<title>Audimance - DESCENT {{.Room.LabelText}}</title>
 
+   <link rel="stylesheet" href="/css/master.css">
 </head>
 <body>
 
-	Room {{.Room.LabelText}} <span id="loadStatus">loading</span>
 	<input type="hidden" id="roomName" value="{{.Room.Name}}">
 
-	<!-- audio files to be played >
-	{{range .Room.AllTracks}}
-	<audio id="{{.ID}}" preload="auto">
-		<source real_src="{{.URI}}" type="audio/ogg; codecs=opus"/>
-	</audio>
-	{{end}}
-   < -->
+   <!--div id="debug"></div -->
 
-   <div id="debug"></div>
-
-   <div style="width=100%; height=500px; background=cyan; ">
-      <button id="playButton" style="width=100%; height=100%; min-height=100%;" disabled>Play</button>
-	<!-- script src="/app/resonance-audio.min.js"></script -->
+   <div id="map">
+      <button id="playButton" disabled>loading</button>
    </div>
+
 	<script src="/app/eventemitter3.js"></script>
 	<script src="/app/howler.js"></script>
 	<script src="/app/room.js"></script>
