@@ -30,8 +30,8 @@ rooms:
     sources:
       - name: "Bumps and Bangs"
         location:
-          x: 70
-          y: 1
+          x: 75
+          y: 60
           z: 1
         tracks:
           - cue: "Top of Act 1"
@@ -48,8 +48,8 @@ rooms:
             audio_file: "/performance/6bump.opus"
       - name: "David"
         location:
-          x: 1
-          y: 70
+          x: 20
+          y: 20
           z: 1
         tracks:
           - cue: "Top of Act 1"
@@ -67,7 +67,7 @@ rooms:
       - name: "Dylan"
         location:
           x: 30
-          y: 40
+          y: 55
           z: 1
         tracks:
           - cue: "Top of Act 1"
@@ -84,8 +84,8 @@ rooms:
             audio_file: "/performance/6dylan.opus"
       - name: "George"
         location:
-          x: 80
-          y: 80
+          x: 90
+          y: 90
           z: 1
         tracks:
           - cue: "Top of Act 1"
@@ -103,7 +103,7 @@ rooms:
       - name: "Headers"
         location:
           x: 50
-          y: 50
+          y: 30
           z: 1
         tracks:
           - cue: "Top of Act 1"
