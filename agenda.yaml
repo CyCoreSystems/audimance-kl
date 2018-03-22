@@ -14,13 +14,15 @@ cues:
   - name: "Pastorale"
     data: "Pastorale"
   - name: "Intermission warning"
-    data: "INT-60 sec warning"
+    data: "INT-5 min warning"
   - name: "Top of Act 2"
     data: "Top of Act 2"
   - name: "Underworld"
     data: "Underworld"
   - name: "Ethereal Tree"
     data: "Ethereal Tree"
+  - name: "Winter"
+    data: "Winter"
   - name: "Dead Reckoning"
     data: "Dead Reckoning"
 
@@ -35,17 +37,46 @@ rooms:
           z: 1
         tracks:
           - cue: "Top of Act 1"
-            audio_file: "/performance/1bump.opus"
+            load_cue: "5-min"
+            kill_cue: "Venus Solo"
+            audio_files:
+               - "/performance/1bump.opus"
+               - "/performance/1bump.m4a"
           - cue: "Venus Solo"
-            audio_file: "/performance/2bump.opus"
+            load_cue: "Top of Act 1"
+            kill_cue: "Pastorale"
+            audio_files: 
+               - "/performance/2bump.opus"
+               - "/performance/2bump.m4a"
           - cue: "Pastorale"
-            audio_file: "/performance/3bump.opus"
+            load_cue: "Venus Solo"
+            kill_cue: "INT-5 min warning"
+            audio_files: 
+               - "/performance/3bump.opus"
+               - "/performance/3bump.m4a"
           - cue: "Top of Act 2"
-            audio_file: "/performance/4bump.opus"
+            load_cue: "INT-5 min warning"
+            kill_cue: "Ethereal Tree"
+            audio_files:
+               - "/performance/4bump.opus"
+               - "/performance/4bump.m4a"
           - cue: "Ethereal Tree"
-            audio_file: "/performance/5bump.opus"
+            load_cue: "Top of Act 2"
+            kill_cue: "Winter"
+            audio_files:
+               - "/performance/5bump.opus"
+               - "/performance/5bump.m4a"
+          - cue: "Winter"
+            load_cue: "Ethereal Tree"
+            kill_cue: "Dead Reckoning"
+            audio_files:
+               - "/performance/6bump.opus"
+               - "/performance/6bump.m4a"
           - cue: "Dead Reckoning"
-            audio_file: "/performance/6bump.opus"
+            load_cue: "Winter"
+            audio_files:
+               - "/performance/7bump.opus"
+               - "/performance/7bump.m4a"
       - name: "David"
         location:
           x: 20
@@ -53,17 +84,46 @@ rooms:
           z: 1
         tracks:
           - cue: "Top of Act 1"
-            audio_file: "/performance/1david.opus"
+            load_cue: "5-min"
+            kill_cue: "Venus Solo"
+            audio_files:
+               - "/performance/1david.opus"
+               - "/performance/1david.m4a"
           - cue: "Venus Solo"
-            audio_file: "/performance/2david.opus"
+            load_cue: "Top of Act 1"
+            kill_cue: "Pastorale"
+            audio_files: 
+               - "/performance/2david.opus"
+               - "/performance/2david.m4a"
           - cue: "Pastorale"
-            audio_file: "/performance/3david.opus"
+            load_cue: "Venus Solo"
+            kill_cue: "INT-5 min warning"
+            audio_files:
+               - "/performance/3david.opus"
+               - "/performance/3david.m4a"
           - cue: "Top of Act 2"
-            audio_file: "/performance/4david.opus"
+            load_cue: "INT-5 min warning"
+            kill_cue: "Ethereal Tree"
+            audio_files:
+               - "/performance/4david.opus"
+               - "/performance/4david.m4a"
           - cue: "Ethereal Tree"
-            audio_file: "/performance/5david.opus"
+            load_cue: "Top of Act 2"
+            kill_cue: "Winter"
+            audio_files:
+               - "/performance/5david.opus"
+               - "/performance/5david.m4a"
+          - cue: "Winter"
+            load_cue: "Ethereal Tree"
+            kill_cue: "Dead Reckoning"
+            audio_files:
+               - "/performance/6david.opus"
+               - "/performance/6david.m4a"
           - cue: "Dead Reckoning"
-            audio_file: "/performance/6david.opus"
+            load_cue: "Winter"
+            audio_files:
+               - "/performance/7david.opus"
+               - "/performance/7david.m4a"
       - name: "Dylan"
         location:
           x: 30
@@ -71,17 +131,46 @@ rooms:
           z: 1
         tracks:
           - cue: "Top of Act 1"
-            audio_file: "/performance/1dylan.opus"
+            load_cue: "5-min"
+            kill_cue: "Venus Solo"
+            audio_files:
+               - "/performance/1dylan.opus"
+               - "/performance/1dylan.m4a"
           - cue: "Venus Solo"
-            audio_file: "/performance/2dylan.opus"
+            load_cue: "Top of Act 1"
+            kill_cue: "Pastorale"
+            audio_files:
+               - "/performance/2dylan.opus"
+               - "/performance/2dylan.m4a"
           - cue: "Pastorale"
-            audio_file: "/performance/3dylan.opus"
+            load_cue: "Venus Solo"
+            kill_cue: "INT-5 min warning"
+            audio_files:
+               - "/performance/3dylan.opus"
+               - "/performance/3dylan.m4a"
           - cue: "Top of Act 2"
-            audio_file: "/performance/4dylan.opus"
+            load_cue: "INT-5 min warning"
+            kill_cue: "Ethereal Tree"
+            audio_files:
+               - "/performance/4dylan.opus"
+               - "/performance/4dylan.m4a"
           - cue: "Ethereal Tree"
-            audio_file: "/performance/5dylan.opus"
+            load_cue: "Top of Act 2"
+            kill_cue: "Winter"
+            audio_files:
+               - "/performance/5dylan.opus"
+               - "/performance/5dylan.m4a"
+          - cue: "Winter"
+            load_cue: "Ethereal Tree"
+            kill_cue: "Dead Reckoning"
+            audio_files:
+               - "/performance/6dylan.opus"
+               - "/performance/6dylan.m4a"
           - cue: "Dead Reckoning"
-            audio_file: "/performance/6dylan.opus"
+            load_cue: "Winter"
+            audio_files:
+               - "/performance/7dylan.opus"
+               - "/performance/7dylan.m4a"
       - name: "George"
         location:
           x: 90
@@ -89,17 +178,46 @@ rooms:
           z: 1
         tracks:
           - cue: "Top of Act 1"
-            audio_file: "/performance/1george.opus"
+            load_cue: "5-min"
+            kill_cue: "Venus Solo"
+            audio_files:
+               - "/performance/1george.opus"
+               - "/performance/1george.m4a"
           - cue: "Venus Solo"
-            audio_file: "/performance/2george.opus"
+            load_cue: "Top of Act 1"
+            kill_cue: "Pastorale"
+            audio_files:
+               - "/performance/2george.opus"
+               - "/performance/2george.m4a"
           - cue: "Pastorale"
-            audio_file: "/performance/3george.opus"
+            load_cue: "Venus Solo"
+            kill_cue: "INT-5 min warning"
+            audio_files:
+               - "/performance/3george.opus"
+               - "/performance/3george.m4a"
           - cue: "Top of Act 2"
-            audio_file: "/performance/4george.opus"
+            load_cue: "INT-5 min warning"
+            kill_cue: "Ethereal Tree"
+            audio_files:
+               - "/performance/4george.opus"
+               - "/performance/4george.m4a"
           - cue: "Ethereal Tree"
-            audio_file: "/performance/5george.opus"
+            load_cue: "Top of Act 2"
+            kill_cue: "Winter"
+            audio_files:
+               - "/performance/5george.opus"
+               - "/performance/5george.m4a"
+          - cue: "Winter"
+            load_cue: "Ethereal Tree"
+            kill_cue: "Dead Reckoning"
+            audio_files:
+               - "/performance/6george.opus"
+               - "/performance/6george.m4a"
           - cue: "Dead Reckoning"
-            audio_file: "/performance/6george.opus"
+            load_cue: "Winter"
+            audio_files:
+               - "/performance/7george.opus"
+               - "/performance/7george.m4a"
       - name: "Headers"
         location:
           x: 50
@@ -107,17 +225,46 @@ rooms:
           z: 1
         tracks:
           - cue: "Top of Act 1"
-            audio_file: "/performance/1header.opus"
+            load_cue: "5-min"
+            kill_cue: "Venus Solo"
+            audio_files:
+               - "/performance/1header.opus"
+               - "/performance/1header.m4a"
           - cue: "Venus Solo"
-            audio_file: "/performance/2header.opus"
+            load_cue: "Top of Act 1"
+            kill_cue: "Pastorale"
+            audio_files:
+               - "/performance/2header.opus"
+               - "/performance/2header.m4a"
           - cue: "Pastorale"
-            audio_file: "/performance/3header.opus"
+            load_cue: "Venus Solo"
+            kill_cue: "INT-5 min warning"
+            audio_files:
+               - "/performance/3header.opus"
+               - "/performance/3header.m4a"
           - cue: "Top of Act 2"
-            audio_file: "/performance/4header.opus"
+            load_cue: "INT-5 min warning"
+            kill_cue: "Ethereal Tree"
+            audio_files:
+               - "/performance/4header.opus"
+               - "/performance/4header.m4a"
           - cue: "Ethereal Tree"
-            audio_file: "/performance/5header.opus"
+            load_cue: "Top of Act 2"
+            kill_cue: "Winter"
+            audio_files:
+               - "/performance/5header.opus"
+               - "/performance/5header.m4a"
+          - cue: "Winter"
+            load_cue: "Ethereal Tree"
+            kill_cue: "Dead Reckoning"
+            audio_files:
+               - "/performance/6header.opus"
+               - "/performance/6header.m4a"
           - cue: "Dead Reckoning"
-            audio_file: "/performance/6header.opus"
+            load_cue: "Winter"
+            audio_files:
+               - "/performance/7header.opus"
+               - "/performance/7header.m4a"
 
 announcements:
   - name: "5min"
