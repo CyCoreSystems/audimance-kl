@@ -14,6 +14,7 @@
 	<input type="hidden" id="roomName" value="{{.Room.Name}}"/>
 
    <!--div id="debug"></div -->
+   <h3> Status: <span id="play">Loading Program</span> </h3>
 
    <h3> Mix your tracks: </h3>
 
@@ -21,14 +22,13 @@
       {{ range .Room.Sources }}
       <li>
          <label class="selectme" name="bumps" for="{{.ID}}">{{.Name}}</label>
-         <input type="checkbox" class="selector" name="{{.ID}}" id="{{.ID}}" CHECKED />
+         <input type="checkbox" class="selector" name="{{.ID}}" id="{{.ID}}" />
          <div class="selectorstatus">&nbsp;</div>
-         <audio controls="true" id="audio-{{.ID}}" loop="true" src="/media/silence.wav"/>
+         <audio id="audio-{{.ID}}"/>
       </li>
       {{ end }}
    </ul>
 
-   <button id="play">Loading Program</button>
 
 	<script src="/app/eventemitter3.js"></script>
 	<script src="/app/howler.js"></script>

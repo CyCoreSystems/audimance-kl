@@ -53,11 +53,11 @@ input[type=checkbox].selector {
 }
 label.selectme {
    display: inline-block; 
+   background: #eee;
    padding: 10px 20px;
    font-weight: bold;
    font-size: 1.5em;
-   box-shadow: inset 1px 1px 1px 2px #eee, 1px 1px 1px 2px #ededed;
-   border: 1px solid #efefef;
+   border: 1px solid #ddd;
    cursor: pointer;
    margin: 20px 0 20px 60px;
    text-align: center;
@@ -65,15 +65,18 @@ label.selectme {
 
 div.selectorstatus {
    display: inline-block;
-   background: gray;
+   background: #777;
+   border: 1px solid #888;
    width: 40px; 
    height: 3em;
-   padding: 10px 20px;
+   padding: 17px 20px;
+   margin: 0px 0 0 -5px;
    content: "  ";
 }
 
 input[type=checkbox]:checked ~ div.selectorstatus {
-   background: #33ee33;
+   background: #22bb24;
+   border: 1px solid #11aa11;
 }
 
 button#play {
