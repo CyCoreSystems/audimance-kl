@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible">
+
+	<title>Audimance - DESCENT Performance</title>
+
+   <link rel="stylesheet" href="/css/pure.css">
+   <link rel="stylesheet" href="/css/master.css">
+</head>
+<body>
+
+	<input type="hidden" id="roomName" value="{{.Room.Name}}"/>
+
+   <!--div id="debug"></div -->
+
+   <h3> Mix your tracks: </h3>
+
+   <ul>
+      {{ range .Room.Sources }}
+      <li>
+         <label class="selectme" name="bumps" for="{{.ID}}">{{.Name}}</label>
+         <input type="checkbox" class="selector" name="{{.ID}}" id="{{.ID}}" CHECKED />
+         <div class="selectorstatus">&nbsp;</div>
+         <audio controls="true" id="audio-{{.ID}}" loop="true" src="/media/silence.wav"/>
+      </li>
+      {{ end }}
+   </ul>
+
+   <button id="play">Loading Program</button>
+
+	<script src="/app/eventemitter3.js"></script>
+	<script src="/app/howler.js"></script>
+	<script src="/app/performanceTime.js"></script>
+	<script src="/app/tracks.js"></script>
+</body>
+</html>

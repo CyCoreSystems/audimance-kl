@@ -30,7 +30,7 @@ rooms:
   - name: "stage"
     label_text: "Main Stage"
     sources:
-      - name: "Bumps and Bangs"
+      - name: "Ramp Sounds"
         location:
           x: 75
           y: 60
@@ -84,7 +84,7 @@ rooms:
                - "/performance/7bump.opus"
                - "/performance/7bump.m4a"
                - "/performance/7bump.mp3"
-      - name: "David"
+      - name: "Narrative and Character Description"
         location:
           x: 20
           y: 20
@@ -138,7 +138,7 @@ rooms:
                - "/performance/7david.opus"
                - "/performance/7david.m4a"
                - "/performance/7david.mp3"
-      - name: "Dylan"
+      - name: "Effects and Poetic Description"
         location:
           x: 30
           y: 55
@@ -192,7 +192,7 @@ rooms:
                - "/performance/7dylan.opus"
                - "/performance/7dylan.m4a"
                - "/performance/7dylan.mp3"
-      - name: "George"
+      - name: "Traditional Audio Description"
         location:
           x: 90
           y: 90
@@ -246,7 +246,7 @@ rooms:
                - "/performance/7george.opus"
                - "/performance/7george.m4a"
                - "/performance/7george.mp3"
-      - name: "Headers"
+      - name: "Scene Markers"
         location:
           x: 50
           y: 30
