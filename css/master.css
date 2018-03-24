@@ -28,6 +28,18 @@ li {
 	//flex-grow: 1;
 
 }
+   li#preshow { 
+      margin-top: 3em; 
+      font-size: 2em;
+      line-height: 2.4em;
+   }
+      #big a {
+         display: block;
+         padding: 30px; 
+         background: #eee;
+         margin: 20px;
+
+      }
 
 div#map {
   background-color: cyan;
@@ -56,10 +68,10 @@ label.selectme {
    background: #eee;
    padding: 10px 20px;
    font-weight: bold;
-   font-size: 1.5em;
+ //  font-size: 1.5em;
    border: 1px solid #ddd;
    cursor: pointer;
-   margin: 20px 0 20px 60px;
+   margin: 20px 0 20px 10px;
    text-align: center;
 }
 
@@ -68,9 +80,8 @@ div.selectorstatus {
    background: #777;
    border: 1px solid #888;
    width: 40px; 
-   height: 3em;
-   padding: 17px 20px;
-   margin: 0px 0 0 -5px;
+   padding: 10px 0px;
+   margin: 0px 0 0 -15px;
    content: "  ";
 }
 
