@@ -2,3 +2,6 @@
 *.mp3
 *.ogg
 *.m4a
+*.cert
+*.key
+/media/
