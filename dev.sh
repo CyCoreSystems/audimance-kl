@@ -5,4 +5,4 @@ go generate
 go build
 go install
 popd
-audimance
+audimance -debug

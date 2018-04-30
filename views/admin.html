@@ -1,16 +1,23 @@
-<html>
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible">
 
+	<title>Audimance - Administrative Interface</title>
+
+   <link rel="stylesheet" href="/css/master.css">
+</head>
 <body>
 
-   <button id="act1">Act I</button>
-   <button id="venus">Venus Solo</button>
-   <button id="pastorale">Pastorale</button>
-   <button id="acti2">Act II</button>
-   <button id="ethereal">Ethereal Tree</button>
-   <button id="dead">Dead Reckoning</button>
+	Available Cues:
 
+	<ul>
+		{{range .Cues}}
+		<li><button onclick="triggerCue({{.ID}})">{{.Name}}</button></li>
+		{{end}}
+	</ul>
 
-   <script src="/app/admin.js"></script>
+	<script src="/app/admin.js"></script>
 </body>
-
 </html>
