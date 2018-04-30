@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" initial-scale="1.0">
 	<meta http-equiv="x-ua-compatible">
 
 	<title>Audimance - DESCENT Performance</title>
 
-   <link rel="stylesheet" href="/css/master.css">
+   <link rel="stylesheet" href="/css/room.css">
 </head>
 <body>
 
@@ -14,12 +15,24 @@
 
    <!--div id="debug"></div -->
 
-   <div id="map">
-      <button id="playButton" disabled>loading</button>
-   </div>
+	<!-- <button id="playButton" disabled>loading</button> -->
 
+	<div id="map" style="height:100%;"></div>
+
+	{{ range $src := .Room.Sources }}
+		{{ range $track := .Tracks }}
+			<audio id="audio-{{.ID}}" data-srcid="{{ $src.ID }}" data-id="{{.ID}}" data-cue="{{.Cue}}" data-loadcue="{{.LoadCue}}">
+				{{ range .AudioFiles }}
+				<source src="/media/{{ . }}">
+				{{ end }}
+			</audio>
+		{{ end }}
+	{{ end }}
+
+	<script src="/app/d3.js"></script>
 	<script src="/app/eventemitter3.js"></script>
-	<script src="/app/howler.js"></script>
+	<!-- ><script src="/app/howler.js"></script>< -->
+	<script src="/app/resonance-audio.js"></script>
 	<script src="/app/performanceTime.js"></script>
 	<script src="/app/room.js"></script>
 </body>
