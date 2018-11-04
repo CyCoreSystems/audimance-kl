@@ -303,8 +303,10 @@ rooms:
 
 announcements:
   - name: "5min"
-    cue: "5min"
     exclude_rooms:
       - "stage"
-    source:  "/5min-warning.wav"
+    track:
+      cue: "5min"
+      audio_files:
+        - "/5min-warning.wav"
 
