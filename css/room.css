@@ -2,8 +2,8 @@ body {
 	background-color: black;
 }
 
-div#map {
-  background-color: green;
+div#audimance-map {
+  background-color: black;
 
   /* Make map fullscreen */
   position: fixed;

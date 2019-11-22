@@ -6,18 +6,26 @@
 
 	<title>Audimance - Administrative Interface</title>
 
-   <link rel="stylesheet" href="/css/master.css">
+   <link rel="stylesheet" href="/css/admin.css">
 </head>
 <body>
 
-	Available Cues:
+	<h3>Last Cue:</h3>
+	<div class="lastCue">
+		<span class="lastCueName" id="lastCue">-none-</span>
+		<span class="lastCueTime" id="sinceLastCue">-:--</span>
+	</div>
+
+	<h3>Available Cues:</h3>
 
 	<ul>
 		{{range .Cues}}
-		<li><button onclick="triggerCue({{.ID}})">{{.Name}}</button></li>
+		<li><button onclick="triggerCue({{.ID}})">{{.Name}}</button><span class="referenceTime">{{.FormattedReferenceTime}}</span></li>
 		{{end}}
 	</ul>
 
+	<script src="/app/eventemitter3.js"></script>
+	<script src="/app/performanceTime.js"></script>
 	<script src="/app/admin.js"></script>
 </body>
 </html>
