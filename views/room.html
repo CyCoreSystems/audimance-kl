@@ -17,7 +17,7 @@
 
 	<!-- <button id="playButton" disabled>loading</button> -->
 
-	<div id="audimance-map" style="height:100%;"></div>
+	<div id="audimance-room" style="height:100%;"></div>
 
 	{{ range $src := .Room.Sources }}
 		{{ range $track := .Tracks }}
@@ -29,13 +29,7 @@
 		{{ end }}
 	{{ end }}
 
-	<script src="/app/d3.js"></script>
-	<script src="/app/lodash.min.js"></script>
-	<script src="/app/eventemitter3.js"></script>
-	<!-- ><script src="/app/howler.js"></script>< -->
-	<script src="/app/resonance-audio.js"></script>
-	<script src="/app/performanceTime.js"></script>
-	<script src="/app/agenda.js"></script>
-	<script src="/app/room.js"></script>
+	<script type="module" src="/js/index.js"></script>
 </body>
+
 </html>

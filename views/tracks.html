@@ -12,8 +12,6 @@
 </head>
 <body>
 
-	<input type="hidden" id="roomName" value="{{.Room.Name}}"/>
-
    <!--div id="debug"></div -->
    <h3> Status: <span id="play">Loading Program</span> </h3>
 
@@ -22,8 +20,8 @@
    <ul>
       {{ range .Room.Sources }}
       <li>
-         <label class="selectme" name="bumps" for="{{.ID}}">{{.Name}}</label>
-         <input type="checkbox" class="selector" name="{{.ID}}" id="{{.ID}}" />
+         <label class="selectme" name="bumps" for="input-{{.ID}}">{{.Name}}</label>
+         <input type="checkbox" class="selector" name="{{.ID}}" id="input-{{.ID}}" />
          <div class="selectorstatus">&nbsp;</div>
          <audio id="audio-{{.ID}}"/>
       </li>
@@ -35,5 +33,26 @@
 	<script src="/app/howler.js"></script>
 	<script src="/app/performanceTime.js"></script>
 	<script src="/app/tracks.js"></script>
+
+	<script>
+		let performanceTime = new PerformanceTime()
+		let button = document.getElementById('play')
+		let startCue = 'Top of Act 1'
+
+		button.innerHTML = "Waiting for Performance"
+
+		performanceTime.on('timeSync', function cb() {
+			if(performanceTime.sinceCue(startCue) < 0) {
+				return
+			}
+			button.innerHTML = "Live"
+			performanceTime.off('timeSync', cb)
+		})
+
+		window.onload = LoadAgenda(func(agenda) {
+			TrackRoom({{.Room.Name}}, agenda)
+		})
+
+	</script>
 </body>
 </html>
