@@ -2,10 +2,10 @@ body {
 	background-color: black;
 }
 
-div#audimance-map {
+div#audimance-room {
   background-color: black;
 
-  /* Make map fullscreen */
+  /* Make room-space fullscreen */
   position: fixed;
   left: 0px;
   right: 0px;

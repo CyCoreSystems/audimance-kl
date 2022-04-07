@@ -13,6 +13,8 @@
 <body>
 
    <!--div id="debug"></div -->
+	<input type="hidden" id="roomName" value="{{.Room.Name}}">
+
    <h3> Status: <span id="play">Loading Program</span> </h3>
 
    <h3> Mix your tracks: </h3>
@@ -29,30 +31,7 @@
    </ul>
 
 
-	<script src="/app/eventemitter3.js"></script>
-	<script src="/app/howler.js"></script>
-	<script src="/app/performanceTime.js"></script>
-	<script src="/app/tracks.js"></script>
+	<script type="module" src="/js/tracks.js"></script>
 
-	<script>
-		let performanceTime = new PerformanceTime()
-		let button = document.getElementById('play')
-		let startCue = 'Top of Act 1'
-
-		button.innerHTML = "Waiting for Performance"
-
-		performanceTime.on('timeSync', function cb() {
-			if(performanceTime.sinceCue(startCue) < 0) {
-				return
-			}
-			button.innerHTML = "Live"
-			performanceTime.off('timeSync', cb)
-		})
-
-		window.onload = LoadAgenda(func(agenda) {
-			TrackRoom({{.Room.Name}}, agenda)
-		})
-
-	</script>
 </body>
 </html>
