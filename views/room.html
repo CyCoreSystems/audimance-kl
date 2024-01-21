@@ -5,9 +5,11 @@
 	<meta name="viewport" initial-scale="1.0">
 	<meta http-equiv="x-ua-compatible">
 
-	<title>Audimance - DESCENT Performance</title>
+	<title>Audimance - DESCENT</title>
 
    <link rel="stylesheet" href="/css/room.css">
+
+	<script type="module" src="/js/room.js"></script>
 </head>
 <body>
 
@@ -16,16 +18,22 @@
 	<div id="audimance-room" style="height:100%;"></div>
 
 	{{ range $src := .Room.Sources }}
-		{{ range $track := .Tracks }}
-			<audio id="audio-{{.ID}}" data-srcid="{{ $src.ID }}" data-id="{{.ID}}" data-cue="{{.Cue}}" data-loadcue="{{.LoadCue}}">
-				{{ range .AudioFiles }}
-				<source src="/media/{{ . }}">
-				{{ end }}
-			</audio>
-		{{ end }}
+		<audio id="audio-{{ $src.ID }}-0" data-srcid="{{ $src.ID }}">
+			{{ with index $src.Tracks 0 }}
+			<source src="{{ index .AudioFiles 0 }}"></source>
+			<source src="{{ index .AudioFiles 1 }}"></source>
+			<source src="{{ index .AudioFiles 2 }}"></source>
+			{{ end }}
+		</audio>
+		<audio id="audio-{{ $src.ID }}-1" data-srcid="{{ $src.ID }}">
+			{{ with index $src.Tracks 1 }}
+			<source src="{{ index .AudioFiles 0 }}"></source>
+			<source src="{{ index .AudioFiles 1 }}"></source>
+			<source src="{{ index .AudioFiles 2 }}"></source>
+			{{ end }}
+		</audio>
 	{{ end }}
 
-	<script type="module" src="/js/room.js"></script>
 </body>
 
 </html>

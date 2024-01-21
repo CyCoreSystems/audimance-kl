@@ -1,4 +1,4 @@
-import {LoadAgenda,PerformanceTime,SpatialRoom,TrackRoom} from '/app/app.js'
+import {PerformanceTime} from '/app/app.js'
 
 window.onload = function() {
    let performanceTime = new PerformanceTime()
@@ -6,16 +6,16 @@ window.onload = function() {
    // Performance redirect
    var performanceURL = 'https://live.kineticlight.org/live'
 
-   performanceTime.addEventListener('30-sec', function() {
+   performanceTime.addEventListener('Speech', function() {
       window.location.href = performanceURL
    })
-   performanceTime.addEventListener('Top of Act 1', function() {
+   performanceTime.addEventListener('1-0-a', function() {
       window.location.href = performanceURL
    })
    performanceTime.addEventListener('INT-30 sec', function() {
       window.location.href = performanceURL
    })
-   performanceTime.addEventListener('Top of Act 2', function() {
+   performanceTime.addEventListener('2-0-c', function() {
       window.location.href = performanceURL
    })
 }

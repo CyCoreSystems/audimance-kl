@@ -2,7 +2,7 @@ import {LoadAgenda,PerformanceTime,TrackRoom} from '/app/app.js'
 
 let performanceTime = new PerformanceTime()
 let button = document.getElementById('play')
-let startCue = 'Top of Act 1'
+let startCue = 'Speech'
 
 window.onload = LoadAgenda( function(agenda) {
    TrackRoom(document.getElementById("roomName").value, agenda)
