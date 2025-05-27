@@ -176,7 +176,7 @@ rooms:
             audioFilePrefix: "performance/7dylan"
       - name: "Traditional Description"
         location:
-          x: 40
+          x: 30
           y: 0
           z: 40
         tracks:
