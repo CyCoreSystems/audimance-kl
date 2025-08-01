@@ -22,7 +22,7 @@ ul.selection-list a {
     width: 100%;
 }
 
-ul.selection-list li::after {
+ul.selection-list li.nav-item::after {
     content: '';
     width: 0.5rem;
     height: 0.5rem;
@@ -65,7 +65,7 @@ ul.selection-list li label {
         border-bottom-color: rgb(34, 34, 36) !important;
     }
 
-    ul.selection-list li::after {
+    ul.selection-list li.nav-item::after {
         border-right: 0.125em solid rgb(74, 74, 75);
         border-top: 0.125em solid rgb(74, 74, 75);
     }

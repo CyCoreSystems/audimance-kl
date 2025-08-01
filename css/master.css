@@ -41,12 +41,6 @@ h2 {
    padding: 2rem 0.25rem 1rem 0.25rem;
 }
 
-.nav {
-   padding: 0.5rem;
-   font-size: 115%;
-   display: none;
-}
-
 ul {
    list-style: none;
    width: 100%;
@@ -78,4 +72,8 @@ button#play {
 
 audio {
    padding-top: 0.5em;
+}
+
+ul.nav {
+   display: none;
 }
