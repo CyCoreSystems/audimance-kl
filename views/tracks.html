@@ -9,27 +9,30 @@
 
    <link rel="stylesheet" href="/css/pure.css">
    <link rel="stylesheet" href="/css/master.css">
+   <link rel="stylesheet" href="/css/selection-list.css">
+   <link rel="stylesheet" href="/css/checkbox.css">
 </head>
 <body>
 
-   <!--div id="debug"></div -->
-	<input type="hidden" id="roomName" value="{{.Room.Name}}">
+   <header>
+      <!--div id="debug"></div -->
+      <input type="hidden" id="roomName" value="{{.Room.Name}}">
 
-   <h3> Status: <span id="play">Loading Program</span> </h3>
+      <h1>Mix your tracks</h1>
+   </header>
+   <main>
+      <button id="play" style="display: none;"></button>
 
-   <h3> Mix your tracks: </h3>
-
-   <ul>
-      {{ range .Room.Sources }}
-      <li>
-         <label class="selectme" name="bumps" for="input-{{.ID}}">{{.Name}}</label>
-         <input type="checkbox" class="selector" name="{{.ID}}" id="input-{{.ID}}" />
-         <div class="selectorstatus">&nbsp;</div>
-         <audio id="audio-{{.ID}}"/>
-      </li>
-      {{ end }}
-   </ul>
-
+      <ul id="tracks" class="selection-list">
+         {{ range .Room.Sources }}
+         <li>
+            <label class="selectme" name="bumps" for="input-{{.ID}}">{{.Name}}</label>
+            <input type="checkbox" class="selector" name="{{.ID}}" id="input-{{.ID}}" />
+            <audio id="audio-{{.ID}}"/>
+         </li>
+         {{ end }}
+      </ul>
+   </main>
 
 	<script type="module" src="/js/tracks.js"></script>
 
