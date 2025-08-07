@@ -1,1 +1,3 @@
-FROM audimance
+FROM cycoresystems/audimance
+
+COPY * /data/
